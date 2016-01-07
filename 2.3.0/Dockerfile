@@ -2,8 +2,8 @@
 FROM java:7-jre
 MAINTAINER Sean Nelson <audiohacked@gmail.com>
 
-ARG BASE_URL="http://ftb.cursecdn.com/FTB2/modpacks/FTBInfinity"
-ARG FTB_VERSION="2_2_2"
+ARG BASE_URL="http://ftb.cursecdn.com/FTB2/modpacks/FTBInfinity
+ARG FTB_VERSION="2_3_0"
 ARG SERVER_FILE="FTBInfinityServer.zip"
 ENV SERVER_PORT 25565
 
