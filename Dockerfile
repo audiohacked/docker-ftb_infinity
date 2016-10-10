@@ -3,7 +3,7 @@ FROM openjdk:alpine
 MAINTAINER Sean Nelson <audiohacked@gmail.com>
 
 ENV BASE_URL="http://ftb.cursecdn.com/FTB2/modpacks/FTBInfinity"
-ENV FTB_VERSION="2_3_5"
+ENV FTB_VERSION="2_6_0"
 ENV SERVER_FILE="FTBInfinityServer.zip"
 ENV SERVER_PORT 25565
 
