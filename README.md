@@ -11,7 +11,8 @@ docker run --name ftb_infinity_datastore audiohacked/ftb_infinity:2.3.5 true
 
 Then, run the server container:
 ```
-docker run -d --name ftb_infinity \
+docker run --detach --interactive --tty \
+    --name ftb_infinity \
     --volumes-from ftb_infinity_datastore \
     -p 25565:25565 \
     -e EULA=TRUE \
