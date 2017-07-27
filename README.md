@@ -4,17 +4,17 @@ Pull image:
 docker pull audiohacked/ftb_infinity:stable
 ```
 
-It's highly recommended to run a data container:
+It's highly recommended to run a named data volume:
 ```
-docker run --name ftb_infinity_datastore audiohacked/ftb_infinity:stable true
+docker volume create minecraft_ftb_infinity_data
 ```
 
 Then, run the server container:
 ```
 docker run --detach --interactive --tty \
     --name ftb_infinity \
-    --volumes-from ftb_infinity_datastore \
-    -p 25565:25565 \
-    -e EULA=TRUE \
+    --volume minecraft_ftb_infinity_data:/minecraft/world \
+    --publish 25565:25565 \
+    --env EULA=TRUE \
     audiohacked/ftb_infinity:stable
 ```
